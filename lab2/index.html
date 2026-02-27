@@ -1,0 +1,110 @@
+HTML porfolio
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* The "Midnight" Theme */
+        :root {
+            --bg: #0f1012;
+            --card: #1b1c1e;
+            --accent: #00ff88; /* Cyber Green */
+            --text: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+        
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'Courier New', Courier, monospace; /* Monospace for a clean dev look */
+            line-height: 1.6;
+        }
+
+        /* Basic Custom Cursor */
+        #cursor {
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 999;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .container { max-width: 700px; margin: 100px auto; padding: 20px; }
+
+        header { margin-bottom: 50px; }
+        h1 { font-size: 2.5rem; color: var(--accent); margin-bottom: 10px; }
+        
+        section { margin-bottom: 40px; }
+        h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; border-bottom: 1px solid #333; }
+
+        /* Clean Project List */
+        .project {
+            background: var(--card);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .project:hover { border-left: 4px solid var(--accent); padding-left: 24px; }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        footer { font-size: 0.8rem; color: #555; margin-top: 100px; }
+    </style>
+</head>
+<body>
+
+    <div id="cursor"></div>
+
+    <div class="container">
+        <header>
+            <h1>Manshaj Dalal</h1>
+            <p>// Full Stack Developer & Designer</p>
+        </header>
+
+        <section>
+            <h2>Bio</h2>
+            <p>I am a Full Stack Developer specializing in building scalable web applications and seamless user experiences. With a focus on clean code and efficient back-end architecture, I turn complex problems into functional, elegant digital solutions. Passionate about performance, security, and the latest web technologies.</p>
+        </section>
+
+        <section>
+            <h2>Work</h2>
+            <div class="project">
+                <strong>PDF whispr</strong>
+                <p>A simple PDF summarizer, that used openAI API key to summarize so that the user can ask queries about the PDF.</p>
+            </div>
+            <div class="project">
+                <strong>Blood Donation using OOPS</strong>
+                <p>Created a terminal based UI that takes input from the user for blood donation, using OOPS concept with expection handling.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Connect</h2>
+            <p>GitHub: <a href="#">@ManshajD</a></p>
+            <p>Email: <a href="mailto:hello@site.com">Manshaj@temp.com</a></p>
+        </section>
+
+        <footer>
+            <p>_System terminal 1.0</p>
+        </footer>
+    </div>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
